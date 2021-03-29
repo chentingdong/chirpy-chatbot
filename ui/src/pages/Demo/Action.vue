@@ -73,7 +73,7 @@ export default {
       me: null,
       messenger: null,
       messageList: [],
-      nevaAccessToken: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTc0Nywib3JnX2lkIjoxLCJvcmciOnsiaWQiOjF9LCJpYXQiOjE0OTQwODE1NTF9.xkERCo-5gFCY8xlgIbm7gqQav7HpclZ9MtTUfZCcrkA',
+      nevaAccessToken: '',
       agentId: this.$route.params.agentId,
       reload: null,
       instanceName: 'adidasaspenpreprod',
