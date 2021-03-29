@@ -1,0 +1,110 @@
+/* The input */
+
+.tags-input {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 5px;
+  input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    &:focus {
+      outline: none;
+    }
+    &[type="text"] {
+      color: #495057;
+    }
+  }
+}
+
+.tags-input-wrapper-default {
+  background: $form-bg;
+  border: 1px solid $color-g4;
+  border-radius: $border-radius-s;
+}
+
+/* The tag badges & the remove icon */
+
+.tags-input span {
+  margin-right: 0.3rem;
+}
+
+.tags-input-remove {
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
+  width: 0.5rem;
+  height: 0.5rem;
+  overflow: hidden;
+  &:before, &:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    top: 40%;
+    left: 0;
+    background: $color-g4;
+    height: 2px;
+    margin-top: -1px;
+  }
+  &:before {
+    transform: rotate(45deg);
+  }
+  &:after {
+    transform: rotate(-45deg);
+  }
+}
+
+/* Tag badge styles */
+
+.tags-input-badge {
+  display: inline-block;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  background: $tag-bg;
+}
+
+.tags-input-badge-pill {
+  padding: 0 0.5em;
+}
+
+.tags-input-badge-selected-default {
+  color: $color-body;
+  background-color: $tag-bg;
+  border: 1px solid $color-g5;
+  border-radius: $border-radius-s;
+}
+
+/* Typeahead - badges */
+
+.typeahead-badges > span {
+  cursor: pointer;
+  margin-right: 0.3rem;
+}
+
+/* Typeahead - dropdown */
+
+.typeahead-dropdown {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  width: 100%;
+  li {
+    padding: .4rem 1rem;
+    cursor: pointer;
+  }
+}
+
+/* Typeahead elements style/theme */
+
+.tags-input-typeahead-item-default {
+  color: #fff;
+  background-color: $color-c6;
+}
+
+.tags-input-typeahead-item-highlighted-default {
+  color: #fff;
+  background-color: $color-c7;
+}

@@ -1,0 +1,7 @@
+impala:
+  host: "impala.astound.ai"
+  port: 21050
+
+solr:
+  host: "http://solr.astound.ai"
+  port: 8983

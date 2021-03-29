@@ -1,0 +1,12 @@
+{% if prev == 'PasswordRelated' %}
+Sorry I don't understand.
+{% elif prev == 'ConfirmedFrame' %}
+Well, darn -- looks like I didn't get it right.
+{% elif prev == 'Confident' and items | length == 0 %}
+Well darn, I couldn't find anything helpful.
+{% elif prev == 'Confident' and items | length > 0 %}
+Hmm, looks like I am not confident enough to make recommendations.
+{% elif prev == 'Helpful' %}
+Hmm, it doesn't seem like I'm helping.
+{% endif %}
+Would you like me to create an incident and have an agent follow up with you?

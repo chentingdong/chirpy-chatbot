@@ -1,0 +1,1 @@
+Okay, here's a {{ incident_url }} to the incident. Need anything else?

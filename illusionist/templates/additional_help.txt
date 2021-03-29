@@ -1,0 +1,6 @@
+{% if prev == 'CloseIncident' %}
+Awesome -- glad I could help!
+{% elif prev == 'ConfirmedCreation' %}
+Okay, sorry I wasn't more helpful.
+{% endif %}
+Need anything else?

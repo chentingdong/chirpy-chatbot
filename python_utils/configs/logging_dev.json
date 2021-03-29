@@ -1,0 +1,58 @@
+{
+    "version": 1,
+    "propagate": false,
+    "loggers": {
+        "default": {
+            "handlers": ["console"],
+            "level": "INFO"
+        },
+        "console": {
+            "handlers": ["console"],
+            "level": "DEBUG"
+        },
+        "file": {
+            "handlers": ["file"],
+            "level": "INFO",
+            "propagate": false
+        },
+        "kafka": {
+            "handlers": ["kafka"],
+            "level": "INFO",
+            "propagate": false
+        }
+    },
+    "handlers": {
+        "file": {
+            "class": "logging.handlers.RotatingFileHandler",
+            "filename": "/app/logs/access.log",
+            "maxBytes": 1000000,
+            "backupCount": 5,
+            "level": "INFO",
+            "formatter": "verbose",
+            "encoding": "utf-8"
+        },
+        "console": {
+            "class": "logging.StreamHandler",
+            "level": "DEBUG",
+            "formatter": "verbose"
+        },
+        "kafka": {
+            "class": "python_utils.kafka_handler.KafkaHandler",
+            "brokers": "20.0.5.139:9092, 20.0.5.112:9092, 20.0.5.4:9092, 20.0.5.124:9092, 20.0.5.225:9092",
+            "topic": "log.etl.requests.json",
+            "level": "INFO",
+            "formatter": "simple",
+            "batch_size": 100,
+            "backup_file": "/app/logs/kafka_backup.log"
+        }
+    },
+    "formatters": {
+        "verbose": {
+            "format": "{\"info\": \"[ %(asctime)s, %(levelname)s, %(module)s, %(funcName)s, Line %(lineno)d ]\", \"message:\": \"%(message)s\"}",
+            "datefmt": "%Y-%m-%d %H:%M:%S.%03d"
+        },
+        "simple": {
+            "format": "%(message)s"
+        }
+    }
+}

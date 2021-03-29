@@ -1,0 +1,8 @@
+{% if prev == 'ConfirmedFrame' %}
+Sorry about that.
+Let me gather some information and see if I can help.
+{% elif prev == 'ServiceRecognized' %}
+Okay, gotcha. I'll see if I can help.
+{% endif %}
+Which application is this related to?
+Just type 'skip' if you're not sure or it's not applicable.

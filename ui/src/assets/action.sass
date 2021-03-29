@@ -1,0 +1,52 @@
+/*! Action Theme
+ *  Built on top of Bootstrap 4 (https://getbootstrap.com)
+ *  By Tingdong
+ */
+
+/* import variables first to apply customized variables */
+@import 'variables';
+@import "node_modules/bootstrap/scss/bootstrap";
+@import 'select';
+@import "tags";
+
+body
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+h1
+  font-size: 1.3em;
+  line-height: 3em;
+h2
+  font-size: 1.2em;
+h3
+  font-size: 1.1em;
+h1,h2,h3
+  text-transform: capitalize
+  color: $color-body;
+a
+  color: $color-c6;
+  :hover
+    text-decoration: none;
+    color: $color-c6;
+input,
+textarea,
+.selected-tag,
+.tags-input-badge
+  line-height: $form-line-height;
+  border-radius: $border-radius-s;
+
+.rotate-90
+  transform: rotate(90deg);
+
+img#logo
+  height: 41px;
+
+.site-logo
+  height: 31px;
+  width: auto;
+
+.navbar
+  padding: 5px 15px;
+
+.btn
+  font-size: 0.8em;

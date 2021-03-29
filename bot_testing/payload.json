@@ -1,0 +1,13 @@
+{
+"utterance":"utterance",
+"virtual_agent_user_id": "virtual_agent",
+"client_id": "bot debugger",
+"user_info":
+ 	{
+         "first_name": "Dan",
+         "country": "United States of America",
+         "company": "Slack","group": ""
+        },           
+"debug": "true",
+"bot_name": "botName"
+}

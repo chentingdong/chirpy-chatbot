@@ -1,0 +1,7 @@
+TestData:
+    Headers: {"Content-Type": "application/json"}
+    Jenkins_Host: 'http://bot-testing-framework.aineva.com/api/jenkins/run-conversation/{0}'
+    api_conversation: 'http://bot-testing-framework.aineva.com/api/conversations'
+    api_environment: 'http://bot-testing-framework.aineva.com/api/environments'
+    Slack_token: 'xoxp-23976563686-169335751620-210547545137-2e62c6ce9d576b5f2a3888b411618a51'
+    Slack_recipient: "#api-testing"

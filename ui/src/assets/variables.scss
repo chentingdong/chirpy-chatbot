@@ -1,0 +1,74 @@
+$charset: "UTF-8";
+
+/* color */
+$color-black: #111;
+$color-g1: #333;
+$color-g2: #444;
+$color-g3: #666;
+$color-g4: #999;
+$color-g5: #ddd;
+$color-g6: #eee;
+$color-g7: #efefef;
+$color-white: #fff;
+
+$color-c0: #ff293a;
+$color-c1: #802039;
+$color-c2: #ff592f;
+$color-c3: #ffef2f;
+$color-c4: #197441;
+$color-c5: #80ffff;
+$color-c6: #46A4B8;
+$color-c7: #337ab7;
+$color-c8: #7a4d90;
+$color-c9: #202f41;
+$color-c10: #fcfcf5;
+$color-c11: #d8f5e4;
+
+$color-t1: rgba(255,255,255, 0.5);
+
+$color-start: #a4dad0;
+$color-start-b: #2b8574;
+$color-dialogue: #d2fed2;
+$color-dialogue-b: #7ce1b6;
+$color-action: #d1bbdd;
+$color-action-b: #7a4d90;
+$color-converse: #fcf8d0;
+$color-converse-b: #ffbc2f;
+
+$color-primary: $color-c9;
+$color-secondary: $color-c6;
+$color-success: $color-c4;
+$color-info: $color-c7;
+$color-warning: $color-c2;
+$color-danger: $color-c0;
+$color-light: $color-g5;
+$color-dark: $color-black;
+
+/* action color theme */
+$color-body-bg: $color-g5;
+$color-body: $color-g2;
+$form-bg: $color-c10;
+$tag-bg: $color-c11;
+$form-line-height: 2em;
+$color-border: $color-g4;
+$box-shadow-color: $color-g6;
+
+/* time */
+$t: 1s;
+$tf: 0.5s;
+$ts: 2s;
+
+/* border */
+$border-radius-s: 5px;
+$border-radius-m: 10px;
+$border-radius-l: 24px;
+$border-radius: $border-radius-s;
+
+$border: 1px solid $color-border;
+$border-2: 4px solid $color-border;
+
+/* box shadow*/
+$box-shadow-s: 1px 1px 2px 1px $box-shadow-color;
+$box-shadow-m: 2px 2px 10px 2px $box-shadow-color;
+$box-shadow-l: 5px 5px 20px 2px $box-shadow-color;
+$box-shadow: $box-shadow-s;

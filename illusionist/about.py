@@ -1,0 +1,6 @@
+__title__ = 'illusionist'
+__version__ = '3.0.0'
+__summary__ = 'Astound Answers Workflow Engine'
+__uri__ = 'https://github.com/nevaai/illusionist.git'
+__author__ = 'Tingdong Chen'
+__email__ = 'tingdong@neva.io'
