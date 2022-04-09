@@ -1,35 +1,32 @@
-==============================================
-Astound Conversation Workflow Execution Engine
-==============================================
+# Astound Conversation Workflow Execution Engine
 
+## Local development
 
-**Local development**
-
-#. Install
+- Install
 
    - Docker machine on mac
    - AWS CLI
    - NODE/NPM
 
-#. python_utils is a utility submodule for this Repo, to initialize:
+- python_utils is a utility submodule for this Repo, to initialize:
 
    - Inside PyCharm, right click ``python_utils`` and ``Mark Directory as`` -> ``Sources root`` then execute the following ::
 
         git submodule init
         git submodule update
 
-#. A login script to access Astound docker image repository, ~/bin/ecr-login.sh::
+- A login script to access Astound docker image repository, ~/bin/ecr-login.sh::
 
     #!/bin/bash
     cmd=$(aws ecr get-login | sed 's/-e none //')
     eval $cmd
 
-#. A config file to specify aws reagion, ``~/.aws/config`` ::
+- A config file to specify aws reagion, ``~/.aws/config`` ::
 
     [default]
     region = us-east-1
 
-#. A credential file to store aws ecr login keys, ``~/.aws/credentials`` ::
+- A credential file to store aws ecr login keys, ``~/.aws/credentials`` ::
 
     [ecr]
     aws_access_key_id=ASK_ADMIN_FOR_THIS
@@ -37,7 +34,7 @@ Astound Conversation Workflow Execution Engine
 
    Note: An alternative to above two steps is to use ``aws configure``
 
-#. pycharm config
+- pycharm config
 
     Add a remote interpreter using docker-compose.local.yml
 
@@ -51,15 +48,15 @@ Astound Conversation Workflow Execution Engine
         | *Parameters*: run -h 0.0.0.0 -p 3000 --no-reload
         | *Environment variables*: PYTHONUNBUFFERED=1;CONFIG_ENV=local
 
-#. Install UI dependencies ::
+- Install UI dependencies ::
 
     cd ui && npm install
 
-#. start docker compose in pycharm, then access a workflow, e.g. 'adidas_luke' ::
+- start docker compose in pycharm, then access a workflow, e.g. 'adidas_luke' ::
 
     http://localhost:2000/simulator/adidas_luke
 
-**Swagger**
+## Swagger
 
 Swagger expose for api access endpoint at ``http://<host>:3000/spec``
 
@@ -68,12 +65,28 @@ Swagger ui is served seperately. To run it in local, download the swagger ui doc
     docker pull swaggerapi/swagger-ui
     docker run -p 3500:8080 -e API_URL=http://localhost:3000/spec swaggerapi/swagger-ui
 
-**Documentation**
+## Documentation
 
 Automated documentation build with Sphinx. In ./docs dir, build html page. ::
-
-    cd doc
-    make html
-
+```
+  cd doc
+  make html
+```
 Document can be found in http://<host>/illusionist/docs
 for example: http://localhost:3000/illusionist/docs
+
+## System Design Documents
+
+For detailed design doc, go to [Link to Design Document](./docs/DESIGN.md). Here are some highlights:
+
+### Bot Designer
+
+<img src="./docs/illusionist-bot.jpg" width="1024"/>
+
+### Bot Manager
+
+<img src="./docs/illusionist-bot-manager.jpg" width="1024"/>
+
+### NLP analysis of bot answer performance
+
+<img src="./docs/illusionist-nlp-perf-report.jpg" width="1024"/>
