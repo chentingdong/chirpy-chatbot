@@ -40,6 +40,6 @@ Used for realtime conversation debugging. Target user bot creater.
 
 
 ## NLP analysis:
-This tool compares two sentences to visulize whether the bog engine is yielding the correct answer. Green is good, red is wrong.
+This tool compares one sentences to a bot pool, visulize whether the bog engine is picking the correct answer. Green is good, red is wrong.
 
 <img src="./illusionist-nlp-perf-report.jpg" width="1024"/>
